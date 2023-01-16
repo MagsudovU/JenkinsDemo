@@ -11,7 +11,7 @@ public class JenkinsDemoApplication {
 
     @GetMapping("/message")
     public String getMessage(){
-        return "App is running!!!! und CI/CD funktioniert";
+        return "App is running!!!! und Neu CI/CD funktioniert";
     }
 
     public static void main(String[] args) {
