@@ -13,3 +13,5 @@ stages:
         - "mvn clean install"
   Dockerdeploy:
     stage: deploy
+    script:
+        - echo "deploy"
