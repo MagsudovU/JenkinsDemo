@@ -1,5 +1,3 @@
-image: openjdk:latest
-
 stages:
   - build
   - test
