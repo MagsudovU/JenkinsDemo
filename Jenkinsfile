@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-               bat "mvn clean install"
+               bat '"C:/Program Files/apache-maven-3.8.7/bin/mvn" clean install'
             }
         }
         stage('Deploy') {
