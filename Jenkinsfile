@@ -13,6 +13,3 @@ stages:
         - "mvn clean install"
   Dockerdeploy:
     stage: deploy
-    script:
-        - "docker build -t jenkinsdemo.jar ."
-        - "docker run -p 9090:8080 jenkinsdemo.jar"
