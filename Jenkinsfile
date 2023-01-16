@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'docker build -t jenkinsdemo.jar .'
-                bat 'docker run -p 9090:8080 jenkinsdemo.jar'
+                bat 'docker start -d -p 9090:8080 jenkinsdemo.jar'
             }
         }
     }
