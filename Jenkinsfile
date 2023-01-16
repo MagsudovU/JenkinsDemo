@@ -14,8 +14,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat '"C:/users/u.magsudov/StarWars/JenkinsDemo/docker" build -t jenkinsdemo.jar .'
-                bat '"C:/users/u.magsudov/StarWars/JenkinsDemo/docker" run -p 9090:8080 jenkinsdemo.jar'
+                bat 'docker build -t jenkinsdemo.jar .'
+                bat 'docker run -p 9090:8080 jenkinsdemo.jar'
             }
         }
     }
