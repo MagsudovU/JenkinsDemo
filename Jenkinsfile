@@ -1,17 +1,21 @@
-stages:
-  - build
-  - test
-  - deploy
+pipeline {
+    agent any
 
-  Dockerbuild:
-    stage: build
-    script:
-        - "mvn clean package"
-  Test:
-    stage: test
-    script:
-        - "mvn clean install"
-  Dockerdeploy:
-    stage: deploy
-    script:
-        - echo "deploy"
+    stages {
+        stage('Build') {
+            steps {
+                "mvn clean package"
+            }
+        }
+        stage('Test') {
+            steps {
+                "mvn clean install"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
