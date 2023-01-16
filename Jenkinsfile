@@ -10,12 +10,10 @@ stages:
     tags: [maven]
     script:
         - maven clean package
-
   Test:
     stage: test
     script:
         - sh "mvn clean install"
-
   Dockerdeploy:
     stage: deploy
     script:
