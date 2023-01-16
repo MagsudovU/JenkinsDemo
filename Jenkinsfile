@@ -7,9 +7,8 @@ stages:
 
   Dockerbuild:
     stage: build
-    tags: [maven]
     script:
-        - maven clean package
+        - mvn clean package
   Test:
     stage: test
     script:
